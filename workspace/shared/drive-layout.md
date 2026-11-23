@@ -1,0 +1,87 @@
+# Drive layout
+
+Everything lives under the `CLAUDE WORKSPACE FILES` folder named by `Data:` in the Project instruction: the practice's Google Drive, synced to this Mac and opened as a local folder. Every data file is a plain `.md` file. Build exactly this tree.
+
+```
+CLAUDE WORKSPACE FILES/
+├─ CONTEXT.md
+├─ lists/
+│  ├─ CONTEXT.md
+│  └─ names.md
+├─ clients/
+│  ├─ CONTEXT.md
+│  └─ <Client Name>/
+│     ├─ CONTEXT.md
+│     ├─ <Client Name> – Profile.md
+│     ├─ <Client Name> – Log.md          (append only)
+│     ├─ Income Tax/
+│     │  ├─ CONTEXT.md
+│     │  └─ <year>/
+│     │     ├─ CONTEXT.md
+│     │     └─ <Client Name> – Income Tax <year>.md
+│     ├─ Provisional Tax/
+│     │  ├─ CONTEXT.md
+│     │  └─ <period>/
+│     │     ├─ CONTEXT.md
+│     │     └─ <Client Name> – <period>.md
+│     ├─ Admin Penalty/     same shape: <year>/ with CONTEXT.md and <Client Name> – Admin Penalty <year>.md
+│     ├─ FICA/              same shape: <Client Name> – FICA <year>.md
+│     └─ Tax Clearance/     same shape: <Client Name> – Tax Clearance <year>.md
+└─ outputs/
+   ├─ CONTEXT.md
+   └─ reports/
+      ├─ CONTEXT.md
+      └─ <yyyy-mm-dd hh-mm> <report title>.md   (only when someone asks to save a report)
+```
+
+## Naming
+
+- A file's name is its title plus `.md`, for example `Sam Naidoo – Profile.md`, `Sam Naidoo – Income Tax 2026.md`, `CONTEXT.md`.
+- The separator in every file name is an **en dash** with a space each side: ` – `. Never a hyphen.
+- `<year>` is the four-digit tax year, for example `2027`.
+- `<period>` is `<nth> Provisional <year>`, for example `1st Provisional 2027`, `2nd Provisional 2027`. A provisional period has no parent year folder.
+- Page folder names are exactly: `Income Tax`, `Provisional Tax`, `Admin Penalty`, `FICA`, `Tax Clearance`.
+- `<Client Name>` is the profile Name, written the same everywhere. Search for an existing client before creating one.
+
+## CONTEXT files
+
+Every folder holds one file named exactly `CONTEXT.md`. It says what the folder holds: what is here, what each file or subfolder is, how it is named. It holds no steps and no client data beyond the folder's own name. **A folder is created together with its CONTEXT.md, never without it.**
+
+| Folder | Template |
+|---|---|
+| `CLAUDE WORKSPACE FILES/` | [../templates/drive-context/crm.md](../templates/drive-context/crm.md) |
+| `lists/` | [../templates/drive-context/lists-folder.md](../templates/drive-context/lists-folder.md) |
+| `clients/` | [../templates/drive-context/clients.md](../templates/drive-context/clients.md) |
+| `<Client Name>/` | [../templates/drive-context/client.md](../templates/drive-context/client.md) |
+| a page folder (`Income Tax/` etc.) | [../templates/drive-context/page.md](../templates/drive-context/page.md) |
+| a year or period folder | [../templates/drive-context/year.md](../templates/drive-context/year.md) |
+| `outputs/` | [../templates/drive-context/outputs.md](../templates/drive-context/outputs.md) |
+| `outputs/reports/` | [../templates/drive-context/reports-folder.md](../templates/drive-context/reports-folder.md) |
+
+First-run setup creates `CLAUDE WORKSPACE FILES/`, `lists/`, `clients/`, `outputs/` and `outputs/reports/` for the first time, each with its CONTEXT.md from the templates above. It is setup, not a skill. Every other folder is made by a skill ([../skills/CONTEXT.md](../skills/CONTEXT.md)).
+
+## The names file
+
+`lists/names.md` maps each slot to its display name: `Staff 1` to `Staff 4`, `Practitioner 1` to `Practitioner 2`, `Office 1` to `Office 2`. Shape: [../templates/names.md](../templates/names.md). It is filled at setup.
+
+- Claude **reads** it to show and accept real names, as [work-pages.md](work-pages.md) says. Claude never edits it. A request to change it or to add a slot is Error 500 ([error-500.md](error-500.md)).
+- Only the practice's administrator edits that file by hand, on the system provider's say-so.
+- The options themselves (statuses, client types, marital status and so on) are fixed in these rules, not on the Drive.
+
+## Create on first use
+
+- A year or period folder, and the entry file inside it, are created the first time someone ticks a status or writes a note for that year or period ([../skills/statuses.md](../skills/statuses.md), [../skills/notes.md](../skills/notes.md)). Never in advance.
+- The Provisional Tax folder exists only for clients whose provisional tax is Yes. A client switched to No keeps the folder and its history.
+- Inactive clients keep everything. Nothing is ever deleted when a client goes Inactive.
+
+## Finding things
+
+Find files and lines with a local text search over the folder, for example `grep -rl` for the files that hold a line, `grep -rn` for the lines. Search the narrowest folder that can hold the answer: a client's folder, or one page folder across `clients/`. Never open every client's files to answer a question; read only the files a search returns.
+
+## Conflict copies
+
+Google Drive for desktop can create a duplicate when two Macs change the same file before it syncs. It has the same name plus a suffix, for example `Sam Naidoo – Log (1).md`, or a name containing "conflict".
+- **Reading** such a client is fine. Reports still include them, and their foot adds the line `<n> client(s) have a duplicate file: <names>.`
+- **Changing** that client stops. Say exactly: `<Client> has two versions of their <file> on the Drive, probably from two Macs saving at once. I can't change <Client> until your administrator merges them. Nothing has been changed.`
+
+Never merge or delete either copy yourself.
