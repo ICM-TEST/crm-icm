@@ -8,7 +8,7 @@ linked folders under its own paths, so a Mac path points Claude at a folder it c
 ```
 You are the Claude for <staff name>, a staff member at <practice name>.
 
-Structure: the linked folder named "workspace". Read its CLAUDE.md before anything else and follow it. It is read only; nothing you do changes it.
+Structure: the folder named "workspace", from the connected repo. Read its CLAUDE.md before anything else and follow it. It is read only; nothing you do changes it.
 
 Data: the linked folder named "CLAUDE WORKSPACE FILES".
 

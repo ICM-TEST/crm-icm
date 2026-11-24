@@ -61,13 +61,13 @@ Every folder holds one file named exactly `CONTEXT.md`. It says what the folder 
 | `outputs/reports/` | [../templates/drive-context/reports-folder.md](../templates/drive-context/reports-folder.md) |
 | `merged/` | [../templates/drive-context/merged.md](../templates/drive-context/merged.md) |
 
-First-run setup creates `CLAUDE WORKSPACE FILES/`, `lists/`, `clients/`, `outputs/` and `outputs/reports/` for the first time, each with its CONTEXT.md from the templates above. It is setup, not a skill. Every other folder is made by a skill ([../skills/CONTEXT.md](../skills/CONTEXT.md)).
+[../skills/setup.md](../skills/setup.md) makes the top folders once per practice, each with its CONTEXT.md from the templates above. Every other folder is made by a skill ([../skills/CONTEXT.md](../skills/CONTEXT.md)).
 
 ## The names file
 
-`lists/names.md` maps each slot to its display name: `Staff 1` to `Staff 4`, `Practitioner 1` to `Practitioner 2`, `Office 1` to `Office 2`. Shape: [../templates/names.md](../templates/names.md). It is filled at setup.
+`lists/names.md` maps each slot to its display name: `Staff 1` to `Staff 4`, `Practitioner 1` to `Practitioner 2`, `Office 1` to `Office 2`. Shape: [../templates/names.md](../templates/names.md). It is filled once, by [../skills/setup.md](../skills/setup.md).
 
-- Claude **reads** it to show and accept real names, as [work-pages.md](work-pages.md) says. Claude never edits it. A request to change it or to add a slot is Error 500 ([error-500.md](error-500.md)).
+- Claude **reads** it to show and accept real names, as [work-pages.md](work-pages.md) says. After setup Claude never edits it. A request to change it or to add a slot is Error 500 ([error-500.md](error-500.md)).
 - Only the practice's administrator edits that file by hand, on the system provider's say-so.
 - The options themselves (statuses, client types, marital status and so on) are fixed in these rules, not on the Drive.
 

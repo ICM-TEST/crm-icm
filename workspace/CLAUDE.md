@@ -9,7 +9,7 @@ Each staff member works in a Claude Cowork project on their Mac. `workspace/` is
 - `Data:` the linked folder named `CLAUDE WORKSPACE FILES`,
 - `System provider:` who to contact for a system change.
 
-Only the instruction and the Data folder count. Memory, earlier chats and anything you remember do not. If the instruction has no name or no `Data:` line, stop and say this Claude isn't set up yet. If the `Data:` folder can't be opened, say so and stop.
+Only the instruction and the Data folder count. Memory, earlier chats and anything you remember do not. If the instruction has no name or no `Data:` line, stop and say this Claude isn't set up yet. If the `Data:` folder can't be opened, say so and stop. If it opens but has no `CONTEXT.md` at its top, run [skills/setup.md](skills/setup.md) before anything else.
 
 ## How you talk to people
 
@@ -23,13 +23,14 @@ Staff aren't technical. Work quietly and speak only when they need you.
 
 | If the task is... | Read |
 |---|---|
+| The CRM folder is empty, or someone asks to set up the CRM | [skills/setup.md](skills/setup.md) |
 | Adding a new client | [skills/new-client.md](skills/new-client.md) |
 | Showing or opening a client: their profile and latest year on each page | [skills/client-card.md](skills/client-card.md) |
 | Changing a client's profile (any field) | [skills/update-profile.md](skills/update-profile.md) |
 | Ticking or unticking a status, Set As Complete, on any page | [skills/statuses.md](skills/statuses.md) |
 | Adding, correcting or removing a note | [skills/notes.md](skills/notes.md) |
 | A question about one client: one fact, what's ticked, notes, the log | [skills/look-up.md](skills/look-up.md) |
-| A list across clients, a client's full history, or one page across all years, e.g. "all provisional clients that are submitted", "the full report for a client"; a list of clients by any profile data, e.g. all clients in one office | [skills/reports.md](skills/reports.md) |
+| A list across clients (by status or profile data), a client's full history, or one page across all years | [skills/reports.md](skills/reports.md) |
 | Adding, renaming or removing an option, or changing a slot name | Error 500: [shared/error-500.md](shared/error-500.md) |
 | Where something is, what a file is called, how to find things | [shared/drive-layout.md](shared/drive-layout.md) |
 | What a profile field holds, or which values it allows | [shared/client-fields.md](shared/client-fields.md) |
@@ -43,7 +44,7 @@ Staff aren't technical. Work quietly and speak only when they need you.
 | `shared/` | The facts every skill uses: layout, fields, pages, Error 500 |
 | `templates/` | The shape of each file a skill creates, and of the card and the report |
 | `skills/` | One file per job: what to read, the steps, what the person confirms |
-| `CLAUDE WORKSPACE FILES/lists/names.md` | The display name of each slot (Staff, Practitioner, Office). Read-only for you |
+| `CLAUDE WORKSPACE FILES/lists/names.md` | The display name of each slot (Staff, Practitioner, Office). Written once by setup, then read-only for you |
 | `CLAUDE WORKSPACE FILES/clients/` | One folder per client: profile, log, page folders |
 | `CLAUDE WORKSPACE FILES/outputs/reports/` | Saved reports, only when asked |
 | `CLAUDE WORKSPACE FILES/merged/` | Spare copies kept after a merge. Never read for reports |

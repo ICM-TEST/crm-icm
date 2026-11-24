@@ -19,8 +19,9 @@ value on that practice's Drive or in its Project instruction, never in here.
 ## Setting up a new practice
 
 1. Answer [setup/questionnaire.md](setup/questionnaire.md) with the practice.
-2. Follow [setup/onboarding.md](setup/onboarding.md): their Drive folder, one Cowork project per staff member, the
-   Project instruction from [setup/project-instructions.md](setup/project-instructions.md), first-run checks.
+2. Follow [setup/onboarding.md](setup/onboarding.md): one empty shared Drive folder, one Cowork project per staff
+   member with this repo and the folder connected, the Project instruction from
+   [setup/project-instructions.md](setup/project-instructions.md). Claude builds the CRM on the first run.
 3. Load their existing clients once: [setup/population-guide.md](setup/population-guide.md).
 
 ## Changing the live system
