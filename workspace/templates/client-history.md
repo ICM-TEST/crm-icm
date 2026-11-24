@@ -7,7 +7,7 @@ The report shown in the chat when someone asks for a client's full report or his
 - Copy the HTML below exactly. Change only the `{{...}}` placeholders and repeat the blocks the comments name. Never change the styles, the layout, the order or the labels: every report looks the same.
 - `{{a|b}}`: write the one that applies.
 - Title: the client's name. Under it: client type, practitioner and office, as names, never slots. Pills: the client's Status, `Provisional: Yes` or `Provisional: No`, and Sign-up (Existing or New). Then one `class="f"` pill per filter ("Filters" in [../skills/reports.md](../skills/reports.md)).
-- Tiles: one per page, in this order: Income Tax, Provisional Tax, Admin Penalty, FICA, Tax Clearance. Each shows how many years or periods are on file, how many are open (Set As Complete not ticked) and how many are complete.
+- Tiles: one per page, in this order: Income Tax, Provisional Tax, Admin Penalty, FICA, Tax Clearance. Each shows how many years or periods are on file (singular for 1, plural otherwise: "1 period", "2 periods", "1 tax year"), how many are open (Set As Complete not ticked) and how many are complete.
 - Sections: one per page, in the same order. One row per year or period on file, **newest first**. Provisional periods compare by year, then 1st before 2nd.
 - Ticked: one `<li>` per ticked Status box option, in the page's path order ([../shared/work-pages.md](../shared/work-pages.md), "The options"). Side statuses get `class="side"`. KPI box options get `class="kpi"`. Statuses show the name in place of the slot, for example `Prep In Progress – <Name>`. Nothing ticked: `<span class="none">Nothing ticked</span>`.
 - Still to happen, and the gap flag: as [../shared/work-pages.md](../shared/work-pages.md) says ("Workflow order"): the main-path steps after the furthest ticked one, ending with Set As Complete. `–` if Set As Complete is ticked. Add the `gap` line only when an earlier main-path step is not ticked. Side statuses are never listed as still to happen.
@@ -74,7 +74,7 @@ td.note{min-width:200px;max-width:280px}.by{display:block;font-family:var(--mono
 <div class="head"><div><div class="eyebrow">Client report · every page, every year</div><h1>{{client name}}</h1><div class="sub">{{client type}} · {{practitioner}} · {{office}}</div></div><div class="pills"><span>{{Active|Inactive}}</span><span>Provisional: {{Yes|No}}</span><span>{{Existing|New}}</span><!-- repeat: one span class="f" per filter --><span class="f">{{filter chip}}</span></div></div>
 <div class="tiles">
 <!-- repeat: one tile per page, in order -->
-<div class="tile"><div class="t"><b>{{page}}</b><span class="yr">{{n}} on file</span></div><div class="v">{{open count}}<span class="of"> open</span></div><div class="l">{{complete count}} complete</div></div>
+<div class="tile"><div class="t"><b>{{page}}</b><span class="yr">{{n}} {{tax year(s)|period(s)}}</span></div><div class="v">{{open count}}<span class="of"> open</span></div><div class="l">{{complete count}} complete</div></div>
 <!-- end repeat -->
 </div>
 <!-- repeat: one section per page, in order -->

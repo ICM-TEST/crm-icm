@@ -84,4 +84,4 @@ Google Drive for desktop can create a duplicate when two Macs change the same fi
 - **Reading** such a client is fine. Reports still include them, and their foot adds the line `<n> client(s) have a duplicate file: <names>.`
 - **Changing** that client stops. Say exactly: `<Client> has two versions of their <file> on the Drive, probably from two Macs saving at once. I can't change <Client> until your administrator merges them. Nothing has been changed.`
 
-Never merge or delete either copy yourself.
+`<file>` is the plain kind of file: "log", "profile" or "<page> <year or period> entry", never the file name. Never merge or delete either copy yourself.

@@ -24,7 +24,7 @@ Every report type links here. Any report can be filtered by **any data shown on 
 
 - **Apply them cheaply.** Profile filters go into the profile search. Status filters go into the entry search, as an exact line. "Last set by" and dates are read from the stamp lines. Note words come from searching the entry's Notes section. Never open every client.
 - **The whole report follows the filters:** scope, tiles, bars, year cards and table count only the filtered clients. The in-scope sentence names the filters.
-- **The header shows every filter as a chip** with `class="f"`, for example `Office: <name>` or `Rental income: Yes`, after the fixed chips such as "Active clients only".
+- **Chips** (`class="f"`, after the fixed chips such as "Active clients only") show only filters other than page, year or period and status, which are in the title: e.g. `Office: <name>`, `Rental income: Yes`.
 - **A breakdown a filter fixes is swapped out.** Filtered to one office, the office bars give way to sign-up bars, then rental income, then language: the first one no filter fixes.
 - **Client history** (one client) takes filters on its own data only, such as years, pages or open only. It still shows a chip for each.
 - **Filters carry forward.** They stay on for follow-ups and narrower versions until the person changes them or says "clear filters". A new report starts with none, unless the person says "same filters".
@@ -65,6 +65,7 @@ A client with a conflict copy is still included; add the foot line ([drive-layou
 ## Follow-up questions
 Questions about a shown report are read only.
 - Answer from the rows already pulled. Use one more small search only when the question needs data that wasn't pulled, for example rental income or a client's notes.
+- "Those" or "them" means the most recent list given in the chat, narrowed ones included: after "which are still open?", "which of those are Pat's?" means the open ones.
 - A number or a few names gets a plain line. A new or narrowed list gets a fresh dashboard.
 - A change asked for from a report goes through its own skill, with its own read-back: [update-profile.md](update-profile.md), [statuses.md](statuses.md), [notes.md](notes.md).
 
