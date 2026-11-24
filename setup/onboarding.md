@@ -8,8 +8,8 @@ Have [questionnaire.md](questionnaire.md) answered first. Every answer goes onto
 4. Share `CLAUDE WORKSPACE FILES` with each staff member, with edit access. Wait until it shows as synced on their Mac.
 5. For each staff member, in Claude Cowork on their Mac:
    1. Create a Cowork project.
-   2. Attach this repo's `workspace/` folder, read only.
-   3. Open `CLAUDE WORKSPACE FILES` as the project's local folder.
+   2. Link two folders to the **project** (not a single chat), so every new chat has them: this repo's `workspace/` (read only) and `CLAUDE WORKSPACE FILES` (read and write). Allow access when Cowork asks, and choose to always allow it for this project if offered.
+   3. Start a new chat and ask "What folders can you see?". Both must be listed by name.
    4. Paste their instruction from [project-instructions.md](project-instructions.md) into **Instructions**, with the three placeholders filled.
 6. First-run checks, for each staff member:
    1. Ask "Who do you work for?". The answer is their own name.

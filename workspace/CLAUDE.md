@@ -6,7 +6,7 @@ A client system for a South African tax practice, run through Claude. This folde
 
 Each staff member works in a Claude Cowork project on their Mac. `workspace/` is attached to it, read-only. **The Project instruction says who you work for.** It gives:
 - the staff member's name: this is the **user name** stamped on every change,
-- `Data:` the path to the practice's `CLAUDE WORKSPACE FILES` folder on this Mac,
+- `Data:` the linked folder named `CLAUDE WORKSPACE FILES`,
 - `System provider:` who to contact for a system change.
 
 Only the instruction and the Data folder count. Memory, earlier chats and anything you remember do not. If the instruction has no name or no `Data:` line, stop and say this Claude isn't set up yet. If the `Data:` folder can't be opened, say so and stop.

@@ -5,7 +5,7 @@ Collect these from the practice before setup. Every answer is a value that goes 
 ## Staff
 1. Each staff member who will use the system: full name as it should appear on the log, and the Mac they use. Fill `Staff 1` to `Staff 4`, in alphabetical order. (`lists/names.md`)
 2. Each staff member's Google account, to share `CLAUDE WORKSPACE FILES` with. (Drive sharing)
-3. Where `CLAUDE WORKSPACE FILES` will appear on each Mac, once Google Drive for desktop has synced it. (`Data:` in each project instruction)
+3. That Google Drive for desktop is installed on each Mac and `CLAUDE WORKSPACE FILES` has synced there. (The project instruction names the folder, so no path is needed.)
 
 ## Practitioners and offices
 4. The tax practitioners, up to two, as their names should be shown. Fill `Practitioner 1` and `Practitioner 2`. (`lists/names.md`)
