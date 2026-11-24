@@ -9,7 +9,7 @@ Answer a read-only question about **one client**. Each kind of question gets one
 | "What's ticked on X's <page> <year or period>?" | A short list of each ticked option with who set it and when, plus Set As Complete if ticked. If there is no entry: "Nothing yet for <page> <year>" |
 | "What still needs to happen for X?" (a page and year or period) | Done so far, still to happen, any gap flagged, and the latest note, as [work-pages.md](../shared/work-pages.md) "Workflow order" says. One short block, read only |
 | "Show the notes" for an entry | The notes in order, each with date, time, user and its snapshot |
-| "Show me the log" | The log lines as a simple table: date and time, user, Google account, change |
+| "Show me the log" | Every log file in the client's folder as one table, oldest first: date and time, user, Google account, change |
 | Several clients at once, e.g. "who is submitted?", "how many are open?" | [reports.md](reports.md) |
 
 It writes nothing and adds no log line.

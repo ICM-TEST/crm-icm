@@ -4,9 +4,8 @@ The card shown in the chat when someone asks to see a client. It is never saved 
 
 ## Fill rules
 
-- Copy the HTML below exactly. Change only the `{{...}}` placeholders. Never change the styles, the layout, the order or the labels: every card looks the same.
+- First, the rules for every HTML template: [CONTEXT.md](CONTEXT.md) ("HTML templates").
 - The HTML is the artifact's whole content, titled `<Client Name>`.
-- `{{a|b}}`: write the one that applies, for example `active` or `inactive`.
 - Every number is shown in full, as on the Profile.
 - A blank field shows `–`.
 - Practitioner and office show the name only (from the slot's bracketed name). Statuses show the option with the slot replaced by its name, for example `Prep In Progress – <Name>`.
@@ -16,7 +15,6 @@ The card shown in the chat when someone asks to see a client. It is never saved 
   - The `complete` line appears only if Set As Complete is ticked.
   - A page with no entry yet: year `–` and `<span class="none">Nothing yet</span>`.
   - A client with no Provisional Tax folder: leave that block in, add class `off` (`<div class="page off">`), year `–`, and `<span class="none">Not provisional</span>`.
-- The foot shows the date and time the card was made and the user name from the Project instruction.
 
 ## HTML
 
@@ -25,7 +23,6 @@ The card shown in the chat when someone asks to see a client. It is never saved 
 :root{--bg:#eef1ef;--card:#ffffff;--fg:#1b2420;--muted:#62706a;--line:#dde3e0;--head:#173f33;--head-fg:#f1f7f4;--chip:#e4efe9;--chip-fg:#1d5c46;--on:#1f7a55;--off:#a1462b;--off-soft:#f6e5de;--done:#1f7a55;
 --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--on:#5cc39a;--off:#e98a6c;--off-soft:#3a241d;--done:#5cc39a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--on:#5cc39a;--off:#e98a6c;--off-soft:#3a241d;--done:#5cc39a;color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.45;padding:20px max(16px,env(safe-area-inset-left,0px))}
 .card{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .head{background:var(--head);color:var(--head-fg);padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between}

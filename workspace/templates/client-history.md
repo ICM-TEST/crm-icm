@@ -4,8 +4,7 @@ The report shown in the chat when someone asks for a client's full report or his
 
 ## Fill rules
 
-- Copy the HTML below exactly. Change only the `{{...}}` placeholders and repeat the blocks the comments name. Never change the styles, the layout, the order or the labels: every report looks the same.
-- `{{a|b}}`: write the one that applies.
+- First, the rules for every HTML template: [CONTEXT.md](CONTEXT.md) ("HTML templates").
 - Title: the client's name. Under it: client type, practitioner and office, as names, never slots. Pills: the client's Status, `Provisional: Yes` or `Provisional: No`, and Sign-up (Existing or New). Then one `class="f"` pill per filter ("Filters" in [../skills/reports.md](../skills/reports.md)).
 - Tiles: one per page, in this order: Income Tax, Provisional Tax, Admin Penalty, FICA, Tax Clearance. Each shows how many years or periods are on file (singular for 1, plural otherwise: "1 period", "2 periods", "1 tax year"), how many are open (Set As Complete not ticked) and how many are complete.
 - Sections: one per page, in the same order. One row per year or period on file, **newest first**. Provisional periods compare by year, then 1st before 2nd.
@@ -14,8 +13,7 @@ The report shown in the chat when someone asks for a client's full report or his
 - Latest note: the last note in the entry, cut to about 80 characters (end with `…` if cut), then `<user> · <mm/dd>`. `–` if the entry has no notes.
 - Complete is `✓` if Set As Complete is ticked, else `Open`.
 - A page with nothing on file shows its `<section>` with the meta `nothing on file yet` and no table. A client with no Provisional Tax folder shows `not provisional` there instead.
-- Names are shown, never slots.
-- The foot shows the date and time the report was pulled and the user name from the Project instruction. Full notes for a year are shown only when asked.
+- Full notes for a year are shown only when asked.
 
 ## HTML
 
@@ -24,7 +22,6 @@ The report shown in the chat when someone asks for a client's full report or his
 :root{--bg:#eef1ef;--card:#ffffff;--fg:#1b2420;--muted:#62706a;--line:#dde3e0;--head:#173f33;--head-fg:#f1f7f4;--chip:#e4efe9;--chip-fg:#1d5c46;--bar:#2f8a69;--track:#e6ece9;--ok:#1f7a55;--open:#a1462b;--open-soft:#f6e5de;--warn:#8a6a12;--warn-soft:#f6efd9;
 --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;--warn:#e5c25e;--warn-soft:#352c14;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;--warn:#e5c25e;--warn-soft:#352c14;color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.45;padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .rep{max-width:1000px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .head{background:var(--head);color:var(--head-fg);padding:18px 22px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:flex-end}

@@ -4,8 +4,7 @@ The report shown in the chat when someone asks for one page across all years: al
 
 ## Fill rules
 
-- Copy the HTML below exactly. Change only the `{{...}}` placeholders and repeat the blocks the comments name. Never change the styles, the layout, the order or the labels: every report looks the same.
-- `{{a|b}}`: write the one that applies.
+- First, the rules for every HTML template: [CONTEXT.md](CONTEXT.md) ("HTML templates").
 - Title: `<Page> · <years or periods on file, oldest to newest>`. Pills: `Active clients only` (plus `Provisional: Yes` for provisional tax), then one `class="f"` pill per filter, as "Filters" in [../skills/reports.md](../skills/reports.md) says. Names, never slots.
 - **Filters:** all counts follow them; show the scope block only when filters are on.
 - **In scope:** the active clients the report covers. For provisional tax: active clients with provisional tax Yes.
@@ -18,7 +17,6 @@ The report shown in the chat when someone asks for one page across all years: al
   - A cell shows the furthest main-path step ticked. A complete entry's furthest step is Set As Complete, so its cell shows only `✓ Complete` (`class="st done"`). An entry with only side statuses shows them as dashed chips (`class="side"`), never `–`. `<span class="none">–</span>` means no entry at all.
   - The meta says `furthest main-path step per year · <shown> of <in scope> shown`.
 - **Large lists:** if more than 200 clients are in scope, show the year cards and leave the table out, unless the request narrows it. Replace the table `<section>` with one line, and say in the foot how to narrow it: by practitioner, office, client type, or open only.
-- The foot shows the date and time the report was pulled and the user name from the Project instruction.
 
 ## HTML
 
@@ -27,7 +25,6 @@ The report shown in the chat when someone asks for one page across all years: al
 :root{--bg:#eef1ef;--card:#ffffff;--fg:#1b2420;--muted:#62706a;--line:#dde3e0;--head:#173f33;--head-fg:#f1f7f4;--chip:#e4efe9;--chip-fg:#1d5c46;--bar:#2f8a69;--track:#e6ece9;--ok:#1f7a55;--open:#a1462b;--open-soft:#f6e5de;--warn:#8a6a12;--warn-soft:#f6efd9;
 --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;--warn:#e5c25e;--warn-soft:#352c14;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;--warn:#e5c25e;--warn-soft:#352c14;color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.45;padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .rep{max-width:1000px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .head{background:var(--head);color:var(--head-fg);padding:18px 22px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:flex-end}

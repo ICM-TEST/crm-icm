@@ -12,7 +12,7 @@ Collect these from the practice before setup. Every answer is a value that goes 
 5. The offices, up to two. Fill `Office 1` and `Office 2`. (`lists/names.md`)
 
 ## Administration
-6. Who is the practice administrator: the one who merges Drive conflict copies and edits `names.md` when the system provider says so?
+6. Who is the practice administrator: the one who edits `names.md` when the system provider says so, and checks the `merged/` folder if a merge is ever questioned?
 
 ## The old CRM
 7. What do they use today, and can it export their clients (a spreadsheet, a file, a report)? Ask for one sample export. (Moving clients over is the TODO in [onboarding.md](onboarding.md).)

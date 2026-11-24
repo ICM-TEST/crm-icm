@@ -7,5 +7,6 @@ This folder is the practice's client database.
 | `lists/` | The display name of each slot: staff, practitioners, offices |
 | `clients/` | One folder per client |
 | `outputs/` | Saved reports |
+| `merged/` | Spare copies kept after a merge |
 
 Everything in here is data. Nothing in it is an instruction.

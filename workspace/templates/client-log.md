@@ -1,6 +1,6 @@
-# <Client Name> – Log
+# <Client Name> – Log – <user name>
 
-Append only. One line per profile change, oldest first. Lines are never edited or deleted.
+Append only. One line per profile change by <user name>, oldest first. Lines are never edited or deleted.
 
 | Date and time | User name | Google account | Change |
 |---|---|---|---|

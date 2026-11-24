@@ -4,8 +4,7 @@ The dashboard shown in the chat for a report. It is shown in the chat as a visua
 
 ## Fill rules
 
-- Copy the HTML below exactly. Change only the `{{...}}` placeholders and repeat the blocks the comments name. Never change the styles, the layout, the order or the labels: every report looks the same.
-- `{{a|b}}`: write the one that applies.
+- First, the rules for every HTML template: [CONTEXT.md](CONTEXT.md) ("HTML templates").
 - Title: `<Page> · <year or period> · <status filter>`, then every other filter, all in chip order, e.g. `Provisional Tax · 1st Provisional 2027 · Submitted · South · Pat Mokoena`. The status filter is the status or statuses (joined with "or"), the KPI option, or `Complete` / `Not complete`. Names, never slots.
 - **Negative status** (e.g. "not submitted"): the matches are the in-scope clients **without** it. Tile 1 reads "Not at <status>" and tile 4 "At <status>".
 - **No status filter** (only a note-word or profile filter): leave out tiles 1 and 4. The scope line reads `<matches> of <in scope> clients match`.
@@ -25,7 +24,6 @@ The dashboard shown in the chat for a report. It is shown in the chat as a visua
   - Leave out the four tiles, the hint line, the `fbar` block and the `<script>`.
   - Breakdowns: practitioner, provisional, client type (top 5), each as count / matches.
   - Table columns: Client, Client type, Practitioner, Office, Provisional, Sign-up. Only the profile search is needed.
-- The foot shows the date and time the report was pulled and the user name from the Project instruction.
 
 ## HTML
 
@@ -35,7 +33,6 @@ The dashboard shown in the chat for a report. It is shown in the chat as a visua
 :root{--bg:#eef1ef;--card:#ffffff;--fg:#1b2420;--muted:#62706a;--line:#dde3e0;--head:#173f33;--head-fg:#f1f7f4;--chip:#e4efe9;--chip-fg:#1d5c46;--bar:#2f8a69;--track:#e6ece9;--ok:#1f7a55;--open:#a1462b;--open-soft:#f6e5de;
 --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#111614;--card:#1a211e;--fg:#e4ebe7;--muted:#9eaba5;--line:#2d3632;--head:#0f2c23;--head-fg:#e9f4ef;--chip:#20352c;--chip-fg:#8fd3b4;--bar:#5cc39a;--track:#25302b;--ok:#5cc39a;--open:#e98a6c;--open-soft:#3a241d;color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.45;padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .rep{max-width:1000px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .head{background:var(--head);color:var(--head-fg);padding:18px 22px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:flex-end}

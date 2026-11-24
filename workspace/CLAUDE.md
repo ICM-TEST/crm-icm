@@ -61,4 +61,4 @@ Staff aren't technical. Work quietly and speak only when they need you.
 7. **Create on first use.** A year or period folder and its entry are made when someone first ticks a status or writes a note there, never in advance.
 8. **One home per fact.** Link to the file that owns it; never copy a rule into a second place.
 9. **Stamp every change** with the user name from the Project instruction and the date and time, as [shared/work-pages.md](shared/work-pages.md) says ("Stamping").
-10. **A duplicate (conflict) copy of a file:** follow [shared/drive-layout.md](shared/drive-layout.md) ("Conflict copies").
+10. **A duplicate (conflict) copy of a file:** merge it before changing that client, as [shared/drive-layout.md](shared/drive-layout.md) says ("Conflict copies").

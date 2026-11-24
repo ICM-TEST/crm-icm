@@ -13,7 +13,7 @@ CLAUDE WORKSPACE FILES/
 │  └─ <Client Name>/
 │     ├─ CONTEXT.md
 │     ├─ <Client Name> – Profile.md
-│     ├─ <Client Name> – Log.md          (append only)
+│     ├─ <Client Name> – Log – <user name>.md   (one per staff member, append only)
 │     ├─ Income Tax/
 │     │  ├─ CONTEXT.md
 │     │  └─ <year>/
@@ -27,11 +27,13 @@ CLAUDE WORKSPACE FILES/
 │     ├─ Admin Penalty/     same shape: <year>/ with CONTEXT.md and <Client Name> – Admin Penalty <year>.md
 │     ├─ FICA/              same shape: <Client Name> – FICA <year>.md
 │     └─ Tax Clearance/     same shape: <Client Name> – Tax Clearance <year>.md
-└─ outputs/
-   ├─ CONTEXT.md
-   └─ reports/
-      ├─ CONTEXT.md
-      └─ <yyyy-mm-dd hh-mm> <report title>.md   (only when someone asks to save a report)
+├─ outputs/
+│  ├─ CONTEXT.md
+│  └─ reports/
+│     ├─ CONTEXT.md
+│     └─ <yyyy-mm-dd hh-mm> <report title>.md   (only when someone asks to save a report)
+└─ merged/      (spare copies after a merge, made on first use)
+   └─ CONTEXT.md
 ```
 
 ## Naming
@@ -57,6 +59,7 @@ Every folder holds one file named exactly `CONTEXT.md`. It says what the folder 
 | a year or period folder | [../templates/drive-context/year.md](../templates/drive-context/year.md) |
 | `outputs/` | [../templates/drive-context/outputs.md](../templates/drive-context/outputs.md) |
 | `outputs/reports/` | [../templates/drive-context/reports-folder.md](../templates/drive-context/reports-folder.md) |
+| `merged/` | [../templates/drive-context/merged.md](../templates/drive-context/merged.md) |
 
 First-run setup creates `CLAUDE WORKSPACE FILES/`, `lists/`, `clients/`, `outputs/` and `outputs/reports/` for the first time, each with its CONTEXT.md from the templates above. It is setup, not a skill. Every other folder is made by a skill ([../skills/CONTEXT.md](../skills/CONTEXT.md)).
 
@@ -80,8 +83,11 @@ Find files and lines with a local text search over the folder, for example `grep
 
 ## Conflict copies
 
-Google Drive for desktop can create a duplicate when two Macs change the same file before it syncs. It has the same name plus a suffix, for example `Sam Naidoo – Log (1).md`, or a name containing "conflict".
-- **Reading** such a client is fine. Reports still include them, and their foot adds the line `<n> client(s) have a duplicate file: <names>.`
-- **Changing** that client stops. Say exactly: `<Client> has two versions of their <file> on the Drive, probably from two Macs saving at once. I can't change <Client> until your administrator merges them. Nothing has been changed.`
+Google Drive for desktop can create a duplicate when two Macs change the same file before it syncs: the same name plus a suffix, for example `Sam Naidoo – Profile (1).md`, or a name containing "conflict". The file without the suffix is the original.
+- **Reading** is fine. Reports include the client; their foot adds `<n> client(s) have a duplicate file: <names>.`
+- **Before changing** a client with a copy, merge it, then carry on with the request:
+  - **A log:** keep every line of both, drop exact duplicates, sort oldest first, save as the original. Tell the person: "I merged two copies of <Client>'s log; nothing was lost."
+  - **A profile or entry:** lines in only one copy that are only added to (notes, log lines) are kept. For each field or tick that differs, show both in one read-back, for example "Office: North in one copy, South in the other. Which is right?", and wait for the answers. Save as the original and add the log line `Merged two copies of the <file>`. No answer: change nothing.
+  - Move the spare copy to `merged/` as `<yyyy-mm-dd hh-mm> <file name>`. Never delete either copy.
 
-`<file>` is the plain kind of file: "log", "profile" or "<page> <year or period> entry", never the file name. Never merge or delete either copy yourself.
+`<file>` is the plain kind of file: "log", "profile" or "<page> <year or period> entry", never the file name.
