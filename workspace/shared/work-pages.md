@@ -53,7 +53,7 @@ Options, and the profile's practitioner and office, use slots (`Staff 1`, `Pract
 - **Reading:** a person may say a status or practitioner with a real name, for example "Prep In Progress <Name>". Look the name up in `names.md`, and use that slot.
 - **Storing:** write the slot plus the name in brackets, for example `Prep In Progress – Staff 2 (<Name>)`, `Practitioner 1 (<Name>)`. The bracketed name is read from `names.md` at the time of writing. If the slot's name is blank, write the slot alone. This way an entry still reads correctly if `names.md` changes later. The repo holds only the slot.
 - **Showing:** show the bracketed name in place of the slot. Never show a slot to a person when a name exists.
-- **"For me", or a staff first name:** "me" or "for me" means the Staff slot whose name in `names.md` matches the user name in the Project instruction. A first name such as "Prep In Progress Ben" means the slot whose name matches. No match, or more than one: ask which staff member is meant, offering the names from `names.md`.
+- **"For me", or a staff first name:** "me" or "for me" means the Staff slot whose name in `names.md` matches the user name in the Project instruction. A first name such as "Prep In Progress <first name>" means the slot whose name matches. No match, or more than one: ask which staff member is meant, offering the names from `names.md`.
 - Never edit `names.md`. A request to change a name, or to add a slot, is Error 500.
 
 ## Stamping

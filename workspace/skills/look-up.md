@@ -4,7 +4,7 @@ Answer a read-only question about **one client**. Each kind of question gets one
 
 | Question | Answer |
 |---|---|
-| One profile fact, e.g. "what's Sam Naidoo's phone number?" | One plain line |
+| One profile fact, e.g. "what's <client>'s phone number?" | One plain line |
 | The whole client or profile | The client card ([client-card.md](client-card.md)) |
 | "What's ticked on X's <page> <year or period>?" | A short list of each ticked option with who set it and when, plus Set As Complete if ticked. If there is no entry: "Nothing yet for <page> <year>" |
 | "What still needs to happen for X?" (a page and year or period) | Done so far, still to happen, any gap flagged, and the latest note, as [work-pages.md](../shared/work-pages.md) "Workflow order" says. One short block, read only |
@@ -24,8 +24,6 @@ It writes nothing and adds no log line.
 3. Read only what that question needs. Show names, not slots, as [work-pages.md](../shared/work-pages.md) says ("Slots and names").
 4. Answer in the form the table gives.
 
-## Output
-The answer in that form, in plain words.
 
 ## Human check
 None, nothing is written.

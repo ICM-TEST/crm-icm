@@ -1,7 +1,7 @@
 # New client
 
 ## Inputs
-- Read: [../shared/client-fields.md](../shared/client-fields.md), [../shared/drive-layout.md](../shared/drive-layout.md), [../templates/client-profile.md](../templates/client-profile.md), [../templates/client-log.md](../templates/client-log.md), [../templates/drive-context/client.md](../templates/drive-context/client.md), [../templates/drive-context/page.md](../templates/drive-context/page.md).
+- Read: [../shared/client-fields.md](../shared/client-fields.md), [../shared/drive-layout.md](../shared/drive-layout.md), [../templates/client-profile.md](../templates/client-profile.md), [../templates/client-log.md](../templates/client-log.md), [../templates/drive-context/client.md](../templates/drive-context/client.md), [../templates/drive-context/page.md](../templates/drive-context/page.md), [../shared/work-pages.md](../shared/work-pages.md) ("Slots and names").
 - Data: `lists/names.md` (to show practitioner and office names); `clients/` (to check the client doesn't exist, searching as [../shared/drive-layout.md](../shared/drive-layout.md) says, "Finding things").
 
 ## Steps

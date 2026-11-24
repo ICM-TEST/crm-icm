@@ -1,6 +1,6 @@
 # Page across years
 
-The report shown in the chat when someone asks for one page across all years: all active clients, every year or period on file. It is shown in the chat as a visual and saved only as a markdown copy, when asked ([../skills/reports.md](../skills/reports.md)). How to pull and fill it: that skill.
+The report shown in the chat when someone asks for one page across all years: all active clients, every year or period on file. How to pull, fill and save it: [../skills/reports.md](../skills/reports.md).
 
 ## Fill rules
 

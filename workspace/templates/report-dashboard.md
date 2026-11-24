@@ -1,11 +1,11 @@
 # Report dashboard
 
-The dashboard shown in the chat for a report. It is shown in the chat as a visual and saved only as the markdown copy described in [../skills/reports.md](../skills/reports.md). How to pull and fill it: that skill.
+The dashboard shown in the chat for a report. How to pull, fill and save it: [../skills/reports.md](../skills/reports.md).
 
 ## Fill rules
 
 - First, the rules for every HTML template: [CONTEXT.md](CONTEXT.md) ("HTML templates").
-- Title: `<Page> · <year or period> · <status filter>`, then every other filter, all in chip order, e.g. `Provisional Tax · 1st Provisional 2027 · Submitted · South · Pat Mokoena`. The status filter is the status or statuses (joined with "or"), the KPI option, or `Complete` / `Not complete`. Names, never slots.
+- Title: `<Page> · <year or period> · <status filter>`, then every other filter, all in chip order, e.g. `Provisional Tax · 1st Provisional 2027 · Submitted · <Office> · <Practitioner>`. The status filter is the status or statuses (joined with "or"), the KPI option, or `Complete` / `Not complete`. Names, never slots.
 - **Negative status** (e.g. "not submitted"): the matches are the in-scope clients **without** it. Tile 1 reads "Not at <status>" and tile 4 "At <status>".
 - **No status filter** (only a note-word or profile filter): leave out tiles 1 and 4. The scope line reads `<matches> of <in scope> clients match`.
 - Filter chips: always the fixed chip `Active clients only`, plus `Provisional: Yes` for provisional tax. Then one `class="f"` chip per filter. The filters, the scope sentence, the swapped breakdowns and the bars all follow "Filters" in [../skills/reports.md](../skills/reports.md).

@@ -3,7 +3,7 @@
 Tick or untick statuses, or Set As Complete, on one page for one client and one year or period.
 
 ## Inputs
-- Read: [../shared/work-pages.md](../shared/work-pages.md), [../shared/drive-layout.md](../shared/drive-layout.md), [../templates/page-entry.md](../templates/page-entry.md), [../templates/drive-context/year.md](../templates/drive-context/year.md).
+- Read: [../shared/work-pages.md](../shared/work-pages.md), [../shared/drive-layout.md](../shared/drive-layout.md), [../shared/error-500.md](../shared/error-500.md), [../templates/page-entry.md](../templates/page-entry.md), [../templates/drive-context/year.md](../templates/drive-context/year.md).
 - Data: `lists/names.md` (slot names); the client's `<Page>/<year or period>/` entry.
 
 ## Steps

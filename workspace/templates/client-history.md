@@ -1,6 +1,6 @@
 # Client history
 
-The report shown in the chat when someone asks for a client's full report or history: one client, every page, every year or period. It is shown in the chat as a visual and saved only as a markdown copy, when asked ([../skills/reports.md](../skills/reports.md)). How to pull and fill it: that skill.
+The report shown in the chat when someone asks for a client's full report or history: one client, every page, every year or period. How to pull, fill and save it: [../skills/reports.md](../skills/reports.md).
 
 ## Fill rules
 

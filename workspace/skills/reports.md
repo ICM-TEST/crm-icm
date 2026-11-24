@@ -32,13 +32,11 @@ Every report type links here. Any report can be filtered by **any data shown on 
 
 ## (a) Status report
 
-Show a list or count across clients, such as "all provisional clients that are submitted", as a dashboard.
-
-## Inputs
+### Inputs
 - Read: [../templates/report-dashboard.md](../templates/report-dashboard.md), [../shared/work-pages.md](../shared/work-pages.md) (pages, options, slots and names), [../shared/client-fields.md](../shared/client-fields.md), [../shared/drive-layout.md](../shared/drive-layout.md) ("Finding things", "Conflict copies").
 - Data: `lists/names.md`; the asked page's entries and the profiles of the clients that match, under `clients/`.
 
-## What a status report needs
+### What a status report needs
 
 | Filter | Rule |
 |---|---|
@@ -51,26 +49,26 @@ Show a list or count across clients, such as "all provisional clients that are s
 - Provisional tax: only clients whose provisional tax is **currently Yes**.
 - A KPI on a page without a KPI box is not an option (see "Filters"). If page, year or period is missing, ask.
 
-## Steps
+### Steps
 1. Work out the filters from the request. Resolve names to slots as [work-pages.md](../shared/work-pages.md) says.
 2. **Pull the matches.** Search the asked page's entries for the exact stored status line, which starts `- <status as stored> —` (the status with its slot and bracketed name, as stored). Exact-line matching keeps "Submitted" from matching "Audit Submitted". For Complete, search the line `- Set As Complete: ticked`. For not complete, take the entries that lack it. Search only the page's folder for that year or period across `clients/`, as "Finding things" says.
 3. **Check each match's profile** with a search too: `Status: Active`, and for provisional tax `Provisional tax: Yes`; for any other profile filter, that profile line, and the stamp and note filters from the entry. Drop clients that fail.
 4. **Count what is in scope:** the active clients the report covers. For provisional tax, that means active clients with provisional tax Yes. Count from the profile search; do not open every client. Count it per practitioner, per office and per client type as well, from the same search, for the breakdown bars.
 5. Read only the matching entries and profiles, for the ticked statuses, who set the newest one and when, the last note (in the same search, so no extra file is opened), Set As Complete, client type, practitioner and office.
 6. **Compute** the counts, percentages and the breakdowns (practitioner, office, client type) as the dashboard template says.
-7. **Show** the report: fill [../templates/report-dashboard.md](../templates/report-dashboard.md) and render it in the chat, as [../CLAUDE.md](../CLAUDE.md) says ("How you talk to people"). Nothing else in the reply but one line saying what was understood: "Here's <report title, with its filters>.", for example "Here's Provisional Tax · 1st Provisional 2027 · Submitted · South." This applies to every report type
+7. **Show** the report: fill [../templates/report-dashboard.md](../templates/report-dashboard.md) and render it in the chat, as [../CLAUDE.md](../CLAUDE.md) says ("How you talk to people"). Nothing else in the reply but one line saying what was understood: "Here's <report title, with its filters>.", for example "Here's Provisional Tax · 1st Provisional 2027 · Submitted · <Office>." This applies to every report type.
 
 A client with a conflict copy is still included; add the foot line ([drive-layout.md](../shared/drive-layout.md), "Conflict copies").
 
 ## Follow-up questions
 Questions about a shown report are read only.
 - Answer from the rows already pulled. Use one more small search only when the question needs data that wasn't pulled, for example rental income or a client's notes.
-- "Those" or "them" means the most recent list given in the chat, narrowed ones included: after "which are still open?", "which of those are Pat's?" means the open ones.
+- "Those" or "them" means the most recent list given in the chat, narrowed ones included: after "which are still open?", "which of those are <practitioner>'s?" means the open ones.
 - A number or a few names gets a plain line. A new or narrowed list gets a fresh dashboard.
 - A change asked for from a report goes through its own skill, with its own read-back: [update-profile.md](update-profile.md), [statuses.md](statuses.md), [notes.md](notes.md).
 
 ## Saving
-Only when the person asks ("save this report"). Write `outputs/reports/<yyyy-mm-dd hh-mm> <report title>.md`. The report title is the dashboard title with its filters, e.g. `Provisional Tax · 1st Provisional 2027 · Submitted · South · Pat Mokoena`, cut only if over 100 characters. It holds:
+Only when the person asks ("save this report"). Write `outputs/reports/<yyyy-mm-dd hh-mm> <report title>.md`. The report title is the dashboard title with its filters, e.g. `Provisional Tax · 1st Provisional 2027 · Submitted · <Office> · <Practitioner>`, cut only if over 100 characters. It holds:
 - the title and the filters,
 - when it was pulled and the user name,
 - the totals (the four tile figures),

@@ -38,7 +38,7 @@ CLAUDE WORKSPACE FILES/
 
 ## Naming
 
-- A file's name is its title plus `.md`, for example `Sam Naidoo – Profile.md`, `Sam Naidoo – Income Tax 2026.md`, `CONTEXT.md`.
+- A file's name is its title plus `.md`, for example `<Client Name> – Profile.md`, `<Client Name> – Income Tax 2026.md`, `CONTEXT.md`.
 - The separator in every file name is an **en dash** with a space each side: ` – `. Never a hyphen.
 - `<year>` is the four-digit tax year, for example `2027`.
 - `<period>` is `<nth> Provisional <year>`, for example `1st Provisional 2027`, `2nd Provisional 2027`. A provisional period has no parent year folder.
@@ -83,11 +83,11 @@ Find files and lines with a local text search over the folder, for example `grep
 
 ## Conflict copies
 
-Google Drive for desktop can create a duplicate when two Macs change the same file before it syncs: the same name plus a suffix, for example `Sam Naidoo – Profile (1).md`, or a name containing "conflict". The file without the suffix is the original.
+Google Drive for desktop can create a duplicate when two Macs change the same file before it syncs: the same name plus a suffix, for example `<Client Name> – Profile (1).md`, or a name containing "conflict". The file without the suffix is the original.
 - **Reading** is fine. Reports include the client; their foot adds `<n> client(s) have a duplicate file: <names>.`
 - **Before changing** a client with a copy, merge it, then carry on with the request:
   - **A log:** keep every line of both, drop exact duplicates, sort oldest first, save as the original. Tell the person: "I merged two copies of <Client>'s log; nothing was lost."
-  - **A profile or entry:** lines in only one copy that are only added to (notes, log lines) are kept. For each field or tick that differs, show both in one read-back, for example "Office: North in one copy, South in the other. Which is right?", and wait for the answers. Save as the original and add the log line `Merged two copies of the <file>`. No answer: change nothing.
+  - **A profile or entry:** lines in only one copy that are only added to (notes, log lines) are kept. For each field or tick that differs, show both in one read-back, for example "Office: <A> in one copy, <B> in the other. Which is right?", and wait for the answers. Save as the original and add the log line `Merged two copies of the <file>`. No answer: change nothing.
   - Move the spare copy to `merged/` as `<yyyy-mm-dd hh-mm> <file name>`. Never delete either copy.
 
 `<file>` is the plain kind of file: "log", "profile" or "<page> <year or period> entry", never the file name.

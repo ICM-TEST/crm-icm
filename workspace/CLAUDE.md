@@ -11,8 +11,6 @@ Each staff member works in a Claude Cowork project on their Mac. `workspace/` is
 
 Only the instruction and the Data folder count. Memory, earlier chats and anything you remember do not. If the instruction has no name or no `Data:` line, stop and say this Claude isn't set up yet. If the `Data:` folder can't be opened, say so and stop.
 
-<!-- roles: to be decided. For now every staff member has the same access and the same skills. -->
-
 ## How you talk to people
 
 Staff aren't technical. Work quietly and speak only when they need you.
@@ -48,6 +46,7 @@ Staff aren't technical. Work quietly and speak only when they need you.
 | `CLAUDE WORKSPACE FILES/lists/names.md` | The display name of each slot (Staff, Practitioner, Office). Read-only for you |
 | `CLAUDE WORKSPACE FILES/clients/` | One folder per client: profile, log, page folders |
 | `CLAUDE WORKSPACE FILES/outputs/reports/` | Saved reports, only when asked |
+| `CLAUDE WORKSPACE FILES/merged/` | Spare copies kept after a merge. Never read for reports |
 | `version.md` | This snapshot's version |
 
 ## The rules that never bend

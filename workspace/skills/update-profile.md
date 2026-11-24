@@ -1,7 +1,7 @@
 # Update profile
 
 ## Inputs
-- Read: [../shared/client-fields.md](../shared/client-fields.md), [../shared/error-500.md](../shared/error-500.md), [../templates/drive-context/page.md](../templates/drive-context/page.md).
+- Read: [../shared/client-fields.md](../shared/client-fields.md), [../shared/error-500.md](../shared/error-500.md), [../shared/work-pages.md](../shared/work-pages.md) ("Slots and names"), [../shared/drive-layout.md](../shared/drive-layout.md) ("Conflict copies"), [../templates/client-log.md](../templates/client-log.md), [../templates/drive-context/page.md](../templates/drive-context/page.md).
 - Data: `<Client Name> – Profile.md` and your log file in `clients/<Client Name>/`; `lists/names.md` for practitioner and office names.
 
 ## Steps

@@ -52,8 +52,6 @@ Inactive clients keep their folder and history.
 
 A placeholder field. The system does not update it yet. Leave it blank unless a person gives a figure; do not calculate one.
 
-<!-- TODO (owner): how Balance due gets updated is out of scope for now. -->
-
 ## Fixed lists (in the repo)
 
 | List | Values |
@@ -77,7 +75,7 @@ Every option on this page is structure. A person selects one and may change whic
 
 One file per staff member beside the profile, `<Client Name> – Log – <user name>.md` ([../templates/client-log.md](../templates/client-log.md)): each person's Claude writes only its own, created on their first change. The log is all of them read together, oldest first; a `<Client Name> – Log.md` without a name (from the data load) is part of it, written only to merge a copy of it. Every profile change adds one line: date and time, user name, Google account, description. Append only: never edit or delete a line. A reversed change (Yes, No, Yes) is just more lines.
 
-Descriptions use the names people see, not slots: "Office changed from North to Central", "Practitioner changed from <Name> to <Name>". Sensitive fields stay as "<field> changed", with no values.
+Descriptions use the names people see, not slots: "Office changed from <Name> to <Name>", "Practitioner changed from <Name> to <Name>". Sensitive fields stay as "<field> changed", with no values.
 
 User name is the name in the Project instruction. Google account is read from the synced Drive folder's path on this Mac, which contains the signed-in account, for example `.../GoogleDrive-<account>/...`. If the account can't be read from the path, write "account not available".
 
