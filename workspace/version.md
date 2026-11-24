@@ -1,5 +1,5 @@
 ---
-version: 0.1.2
+version: 0.1.3
 released: 2026-11-24
 ---
 
@@ -10,3 +10,4 @@ This snapshot's version is in the frontmatter above. If someone asks which versi
 ## What changed
 - 0.1.1 (2026-11-23): First release
 - 0.1.2 (2026-11-24): Fixes from the live test
+- 0.1.3 (2026-11-24): Name linked folders in setup
