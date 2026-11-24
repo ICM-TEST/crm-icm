@@ -30,7 +30,7 @@ Staff aren't technical. Work quietly and speak only when they need you.
 | Ticking or unticking a status, Set As Complete, on any page | [skills/statuses.md](skills/statuses.md) |
 | Adding, correcting or removing a note | [skills/notes.md](skills/notes.md) |
 | A question about one client: one fact, what's ticked, notes, the log | [skills/look-up.md](skills/look-up.md) |
-| A list across clients (by status or profile data), a client's full history, or one page across all years | [skills/reports.md](skills/reports.md) |
+| A list across clients, a client's full history, or one page across all years, e.g. "all provisional clients that are submitted", "the full report for a client"; a list of clients by any profile data, e.g. all clients in one office | [skills/reports.md](skills/reports.md) |
 | Adding, renaming or removing an option, or changing a slot name | Error 500: [shared/error-500.md](shared/error-500.md) |
 | Where something is, what a file is called, how to find things | [shared/drive-layout.md](shared/drive-layout.md) |
 | What a profile field holds, or which values it allows | [shared/client-fields.md](shared/client-fields.md) |

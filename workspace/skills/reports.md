@@ -11,6 +11,7 @@ A report is a live view: it is looked at, not kept. Nothing is saved unless the 
 | (c) Page across years | One page for all clients, every year or period | [../templates/page-years.md](../templates/page-years.md) |
 | (d) Client list | Clients by profile data, e.g. "all clients in one office" | [../templates/report-dashboard.md](../templates/report-dashboard.md), client list mode |
 
+- **(a)** is the dashboard below: Inputs, "What a status report needs" and Steps are its own.
 - **(b)** Find the client ([../shared/drive-layout.md](../shared/drive-layout.md), "Finding things"). Read that client's folder only: the profile and every entry. Fill `client-history.md`.
 - **(c)** One page, all active clients (provisional tax: provisional Yes only), every year or period on file. Search that page's folders across `clients/` as "Finding things" says, and read only what the cards and the table need. Fill `page-years.md`.
 - **(d)** Active clients matching the filters, with no page or status. Only the profile search is needed. Fill the dashboard in client list mode (the template's fill rules).

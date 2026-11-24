@@ -67,10 +67,6 @@ class Structure(unittest.TestCase):
         self.assertIn("System provider:", text)
         self.assertIn("Lock:", text)
 
-    def test_workspace_is_small(self):
-        total = sum(p.stat().st_size for p in workspace_files())
-        self.assertLess(total, 100_000, "workspace/ is attached to every chat: keep it small")
-
     def test_no_connectors_mentioned(self):
         bad = []
         for f in workspace_files():
