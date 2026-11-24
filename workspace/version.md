@@ -1,6 +1,6 @@
 ---
-version: 0.1.1
-released: -
+version: 0.1.2
+released: 2026-11-24
 ---
 
 # Structure version
@@ -9,3 +9,4 @@ This snapshot's version is in the frontmatter above. If someone asks which versi
 
 ## What changed
 - 0.1.1 (2026-11-23): First release
+- 0.1.2 (2026-11-24): Fixes from the live test
